@@ -1,2 +1,2 @@
 def hello():
-    return
+    return "TÄMÄ ON DEV 2"
