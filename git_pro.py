@@ -1,2 +1,3 @@
 def hello():
-    return "TÄMÄ ON DEV 2"
+    return "Hello dev!, mergetetty"
+
