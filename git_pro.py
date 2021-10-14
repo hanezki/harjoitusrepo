@@ -1,37 +1,36 @@
 class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
 
-    def set_name(self, name):
-        self.name = name
+    def __init__(self, city, address, phone_number):
+        self._city = city
+        self._address = address
+        self._phone_number = phone_number
 
-    def set_age(self, age):
-        self.age = age
+    @property
+    def city(self, _default = None):
+        return self._city
 
-    def get_name(self):
-        return self.name
+    @city.setter
+    def city(self, value):
+        self._city = value
 
-    def get_age(self):
-        return self.age
+    @property
+    def address(self):
+        return self._address
 
+    @address.setter
+    def address(self, value):
+        self._address = value
 
-def edit_person(person1, name, age):
-    person.set_age(age)
-    person.set_name(name)
+    @property
+    def phone_number(self, _default=None):
+        return self._phone_number
 
+    @phone_number.setter
+    def phone_number(self, value):
+        self._phone_number = value
 
-def hello():
-    return "Hello dev!"
+    def __str__(self):
+        return f'Address: {self._address}\nCity: {self._city}\nPhone: {self._phone_number}'
 
-
-if __name__ == "__main__":
-    person = Person("hannu", 24)
-    print(f"{person.name}, {person.age}")
-    edit_person(person, "jyrki", "100")
-    print(f"{person.name}, {person.age}")
-
-
-
-
-
+person = Person("oulu", "katu 123", "123 13 123")
+print(person)
